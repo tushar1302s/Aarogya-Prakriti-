@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Animations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        .section {
+            margin-bottom: 60px;
+            padding: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .content {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 20px;
+        }
+        .item {
+            flex: 0 0 auto;
+            width: 260px;
+            height: 400px;
+            margin-right: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            scroll-snap-align: start;
+            transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .game{
+            width: 380px;
+            height: 450px;
+        }
+        .yt{
+            width: 100%;
+            height: 500px;
+
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease-in-out;
+        }
+        .item:hover img {
+            transform: scale(1.15);
+        }
+        .item:nth-child(odd) {
+            animation: slideInRight 0.9s ease-out;
+        }
+        .item:nth-child(even) {
+            animation: slideInLeft 0.9s ease-out;
+        }
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @media (max-width: 600px) {
+            .item {
+                width: 160px;
+                height: 240px;
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img style="border-radius: 30px;" src="Prakrati\Images\Logo.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2 class="text-primary"><img src="Games logo.jpg" alt="Games" class="img-fluid"><b>Play Interesting Games</b></h2>
+            <div class="content" id="games">
+                <!-- Game items -->
+                <div class="item game">
+                    <!--Maze Game-->
+                    <a href="Game1.html"><img src="Maze game.jpg" alt="Game 1"></a>
+                </div>
+                <div class="item game">
+                    <!--Chess Game-->
+                    <a href="Game2.html"><img src="Chess game.jpg" alt="Game 2"></a>
+                </div>
+                <div class="item game">
+                    <!--X/0 Game-->
+                    <a href="Game4.html"><img src="Tic-Tac-Toe game.jpg" alt="Game 3"></a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="text-danger"><img src="Books Logo.jpg" alt="Books" class="img-fluid"><b>Read Powerful Books !</b></h2>
+            <div class="content" id="books">
+                <!-- Book items -->
+                <div class="item">
+                    <a href="https://tu.tv/wp-content/uploads/2020/10/Gandhi-An-Autobiography-The-Story-of-My-Experiments-With-Truth.pdf"><img src="Book12.jpg" alt="Book 1"></a>
+                </div>
+                <div class="item">
+                    <a href="https://drive.google.com/file/d/0B9qBl5vW89vIYjMzMDg4MWEtOTQxNC00MmMzLWI0MDYtNTI4ZjI3MzE2NzJm/view?resourcekey=0-4BcunxyhCznwUfUqJycxZg"><img src="Book9.jpg" alt="Book 2"></a>
+                </div>
+                <div class="item">
+                    <a href="https://drive.google.com/file/d/0Bzh4NOqf9b_jeGJnNGlPRVJtNnc/edit?resourcekey=0-OUUKJv1Z9N2utI_rfrxlOg"><img src="Book3.jpg" alt="Book 3"></a>
+                </div>
+                <div class="item">
+                    <a href="https://drive.google.com/file/d/1eAZMdXO-Zn4_90TV365KMpIqfxUy7J0t/view"><img src="Book4.jpg" alt="Book 4"></a>
+                </div>
+                <div class="item">
+                    <a href="https://drive.google.com/file/d/0B_pxydvD-SjhQnR4bk96YUJsaVE/view?resourcekey=0-kMKtWaVWq1q974t-qQwc0Q"><img src="Book5.jpg" alt="Book 5"></a>
+                </div>
+                <div class="item">
+                    <img src="Book6.jpg" alt="Book 6">
+                </div>
+                <div class="item">
+                    <img src="Book7.jpg" alt="Book 7">
+                </div>
+                <div class="item">
+                    <a href="https://drive.google.com/file/d/0B6wFYDlBeznQa1VxeXdBS2RfUEE/edit?resourcekey=0-zgI9Z3a9o6YtDsRus2AB8Q"><img src="Book8.jpg" alt="Book 8"></a>
+                </div>
+                <div class="item">
+                    <a href="https://ia801006.us.archive.org/13/items/OceanofPDF.comTheAlchemist/_OceanofPDF.com_The_Alchemist.pdf"><img src="Book1.jpg" alt="Book 9"></a>
+                </div>
+                <div class="item">
+                    <a href="https://drive.google.com/file/d/0BwEKYdmMaJIGOEp6enBLM3VxRjg/view?resourcekey=0-oleVde4shCeqr-psMzy7oA"><img src="Book2.jpg" alt="Book 10"></a>
+                </div>
+                <div class="item">
+                    <img src="Book10.jpg" alt="Book 11">
+                </div>
+                <div class="item">
+                    <img src="Book11.jpg" alt="Book 12">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="text-success"><img src="Podcasts Logo.jpg" alt="Podcasts" class="img-fluid"><b>Listen to Best Podcasts</b></h2>
+            <div class="content" id="audiobooks">
+                <!-- Podcast items -->
+                <div class="item">
+                    <a href="https://youtu.be/t1OGfhP3j-o?si=2kho9qbxL40OZJPA"><img src="Podcast1.jpg" alt="Audio Book 1"></a>
+                </div>
+                <div class="item">
+                    <a href="https://youtu.be/_6XVS9oMKpc?si=WIXuj6nGywwZYw0w"><img src="Podcast2.jpg" alt="Audio Book 2"></a>
+                </div>
+                <div class="item">
+                   <a href="https://youtu.be/TDSa7nZhlHY?si=-zdP_1HOLW411tsj"><img src="Podcast3.jpg" alt="Audio Book 3"></a> 
+                </div>
+                <div class="item">
+                    <a href="https://youtu.be/Ju5NTFivWTE?si=oUD9luiwgmT3xDXe"><img src="Podcast4.jpg" alt="Audio Book 4"></a>
+                </div>
+                <div class="item">
+                    <a href="https://youtu.be/h1j0XEpHTSk?si=YE0Un0LwT6GABXbb"><img src="Podcast5.jpg" alt="Audio Book 5"></a>
+                </div>
+                <div class="item">
+                    <a href=""></a><img src="Podcast6.jpg" alt="Audio Book 6">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="text-info"><img src="YT Logo.jpg" alt="YouTube Channels" class="img-fluid"><b>Watch Mind Relaxing and Motivational Channels</b></h2>
+            <div class="content" id="youtube">
+                <!-- YouTube items -->
+                <div class="item yt">
+                    <a href="https://youtu.be/btm11ge60a0?si=5xtWllgCC25H-dMS"><img src="YT8.jpg" alt="YouTube Channel 8"></a>
+                </div>
+                <div class="item yt">
+                    <a href="https://youtu.be/sOQsujvIZM0?si=D_8LhlvvWjxAqTzw"><img src="YT2.jpg" alt="YouTube Channel 2"></a>
+                </div>
+                <div class="item yt">
+                    <a href="https://youtu.be/nKF6L0cOPfk?si=mUOM5dixCJDlOsJE"><img src="YT3.jpg" alt="YouTube Channel 3"></a>
+                </div>
+                <div class="item yt">
+                    <a href="https://youtu.be/XBq6Tm2gv-4?si=alxRgNiTPg0d3Lyx"><img src="YT5.jpg" alt="YouTube Channel 5"></a>
+                </div>
+                <div class="item yt">
+                    <img src="YT6.jpg" alt="YouTube Channel 6">
+                </div>
+                <div class="item yt">
+                    <a href="https://youtu.be/n_hvk4DtABU?si=H0X3peoEsXcbDSK5"><img src="YT7.jpg" alt="YouTube Channel 7"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript for scrollable animations
+        function addScrollSnap(containerId) {
+            const container = document.getElementById(containerId);
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+                container.style.cursor = 'grabbing';
+            });
+
+            container.addEventListener('mouseup', () => {
+                isDown = false;
+                container.style.cursor = 'grab';
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isDown = false;
+                container.style.cursor = 'grab';
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2; // Multiplier for faster scrolling
+                container.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        addScrollSnap('games');
+        addScrollSnap('books');
+        addScrollSnap('audiobooks');
+        addScrollSnap('youtube');
+    </script>
+</body>
+</html>

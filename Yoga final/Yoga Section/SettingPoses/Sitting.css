@@ -1,0 +1,177 @@
+nav{
+    height: 110px;
+    width: 100%;
+    background-color: #E3F2FD;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+#homeLink{
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    font-size: 22px;
+}
+#homeIcon{
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    font-size: 30px;
+    color: black;
+}
+.other{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    height: 40px;
+    width: 118.7px;
+    background-color: rgb(77, 77, 242);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.logo{
+    width: 50%;
+}
+.aboutStanding{
+    height: 600px;
+    width: 100%;
+}
+.poses{
+    /* height: 800px; */
+    width: 100%;
+    background-color: #3E90D3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.posesTitle{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.poseName{
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.BenifitsTitle{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.Benifits{
+    font-size: 20px;
+    font-weight: bold;
+}
+.pos1{
+    /* background-color: aqua; */
+    height: 600px;
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pos2{
+    /* background-color: aqua; */
+    height: 600px;
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.photo{
+    height: 400px;
+    width: 300px;
+    /* background-color: black; */
+}
+.info{
+    height: 400px;
+    width: 400px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    color: white;
+}
+footer{
+    height: 400px;
+    width: 100%;
+    margin-top: 60px;
+    background-color: #11141B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.logo{
+    height: 80px;
+    width: 200px;
+    background-color: #E3F2FD;
+}
+.aboutUs{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.contactUs{
+    height: 300px;
+    width: 500px;
+}
+.aboutUsTitle{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.aboutInfo{
+    height: 220px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+}
+.contactUsTitle{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.contactInfo{
+    height: 220px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+}
+input{
+    height: 30px;
+    width: 80%;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

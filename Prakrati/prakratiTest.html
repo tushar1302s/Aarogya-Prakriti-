@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="PrakratiTest.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img style="height: 100px;position: relative; bottom: 10px;" src="Images\Logo.jpeg" alt="Logo">
+                <img style="height: 80px;" src="Images/Name.png" alt="">
+            </div>
+            <div class="other">
+                <div class="homeTxt"><a id="homeLink" style="text-decoration: none; color: black;" href="C:\Users\Kunal\Downloads\Mini Project (Arogya) (1)\index.html">Home</a></div>
+                <a href="C:\Users\Kunal\Downloads\Mini Project (Arogya) (1)\index.html"><i id="homeIcon" class="fa-solid fa-house"></i></a>
+            </div>
+        </nav>
+    </header>
+    <div style="margin-top: 20px;" class="quizInfo">
+        <div class="firstImg">
+            <div><img height="390px" src="Images/Qlogo.png" alt=""></div>
+            <div id="nextIcon1"><i class="fa-solid fa-circle-arrow-right"></i></div>
+        </div>
+        <div class="secondImg">
+            <img height="360px" src="Images/QuizInfo.png" alt="">
+            <div id="nextIcon2"><i class="fa-solid fa-circle-arrow-right"></i></div>
+        </div>
+        <div class="thirdImg">
+            <img height="400px" src="Images/StartQuiz.png" alt="">
+            <div id="nextIcon3"><button id="startBtn">Start</button></i></div>
+        </div>
+    </div>
+    <div style="margin-top: 20px;" class="container">
+        <form action="#">
+            <div class="box1 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q 1.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q1A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;" src="Images/Q1/Body1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                thin, bony and small framed. Hardly gain weight.
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;" src="Images/Q1/Body2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Medium built. Can gain or lose weight easily
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;" src="Images/Q1/Body3.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Large built. Gain weight easily but difficult to lose
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box2 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q2/Q2.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q2A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;background-color: blueviolet;">
+                                <img style="height: 300px;" src="Images/Q2/Walk1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Fast walk and talk
+                            </div>
+                            <div>
+                                <input name="Q2" id="Q2A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q2B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;background-color: blueviolet;">
+                                <img style="height: 300px;" src="Images/Q2/Walk1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Moderate and determined walk
+                            </div>
+                            <div>
+                                <input name="Q2" id="Q2B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q2C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;background-color: blueviolet;">
+                                <img style="height: 300px;" src="Images/Q2/Walk1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Slow and steady walk
+                            </div>
+                            <div>
+                                <input name="Q2" id="Q2C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box3 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q3/Q3.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q3A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px; width: 266px;" src="Images/Q3/Summer.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Enjoy warm climate but feel uncomfortable in cool weather
+                            </div>
+                            <div>
+                                <input name="Q3" id="Q3A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q3B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;" src="Images/Q3/Winter.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Enjoy cool weather and dislike warm climate
+                            </div>
+                            <div>
+                                <input name="Q3" id="Q3B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q3C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;" src="Images/Q3/Rainy.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                comfortable for most of the year but prefer summer and spring. Don't like damp climate
+                            </div>
+                            <div>
+                                <input name="Q3" id="Q3C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box4 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q4/Q4.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q1A">
+                        <div  class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px; width: 300px;" src="Images/Q4/Sweating1.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Sweat little but not much. Have minimal body odour
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px; width: 300px;" src="Images/Q4/Sweating2.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Sweat a lot. Have medium body odour.
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;" src="Images/Q4/Sweating3.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Sweat moderately but sweat a lot when working hard. Have strong body odour.
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box5 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q5/Q5.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q1A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;" src="Images/Q5/Appetite1.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Irregular Sometimes I feel hungry sometimes I don't
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q5/Appetite2.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Strong and sharp. Always feel hungry
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q5/Appetite3.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Decent appetite. Have tendency to eat for comfort and taste
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box6 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q6/Q6.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q1A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q6/Skin1.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Normal to dry, rough, thin and cool. Skin issues like dryness, dullness and wrinkly
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q6/Skin2.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Normal to oily soft,reddish,sensitive and warm.Skin issues like inflammation
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q1C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q6/Skin3.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Normal to oily soft,thick and cool.Skin issues like excessive oily,itching,fungal infections
+                            </div>
+                            <div>
+                                <input name="Q1" id="Q1C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box7 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q7/Q7.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q7A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q7/Hair1.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Rough,dry and wavy.I get split ends easily
+                            </div>
+                            <div>
+                                <input name="Q7" id="Q7A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q7B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q7/Hair2.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Normal,straight,thin and brownish.
+                            </div>
+                            <div>
+                                <input name="Q7" id="Q7B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q7C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q7/Hair3.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Thick,curly and oily.Hair colour tends to be on darker side
+                            </div>
+                            <div>
+                                <input name="Q7" id="Q7C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box8 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q8/Q8.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q8A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q8/Lips1.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Have thin lips that tend to get dry.Teeth can be somewhat uneven.Teeth may require constant attention
+                            </div>
+                            <div>
+                                <input name="Q8" id="Q8A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q8B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q8/Lips2.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Medium sized soft lips.Upper lip slightly darker than lower lip.Teeth are meduium sized but I tend to suffer from cavities.
+                            </div>
+                            <div>
+                                <input name="Q8" id="Q8B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q8C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q8/Lips3.jpeg" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Large and smooth lips.Teeth are well formed and aligned and required less care in general.
+                            </div>
+                            <div>
+                                <input name="Q8" id="Q8C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box9 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q9/Q9.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q9A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q9/eyes1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Small in size.Feel dry and sleepy eyes often. I blink a lot.
+                            </div>
+                            <div>
+                                <input name="Q9" id="Q9A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q9B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q9/eyes2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Medium in size. I often get reddish eyes.
+                            </div>
+                            <div>
+                                <input name="Q9" id="Q9B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q9C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q9/eyes3.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Big and attractive. I have thick eye lashes.
+                            </div>
+                            <div>
+                                <input name="Q9" id="Q9C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box10 box">
+                <div class="titleBox">
+                    <img height="100px" src="Images/Q9/Q9.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q10A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q9/eyes1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Cracking sound joints.Small forehead. Nails crack easily.
+                            </div>
+                            <div>
+                                <input name="Q10" id="Q10A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q10B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q9/eyes2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Black moles on body.Medium forehead.Nails are pink and soft.
+                            </div>
+                            <div>
+                                <input name="Q10" id="Q10B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q10C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q9/eyes3.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Disproportionate body like heavy thighs,hips etc.Large forehead. Nails are wide and whitish.
+                            </div>
+                            <div>
+                                <input name="Q10" id="Q10C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box11 box">
+                <div class="titleBoxM">
+                    <img height="100px" src="Images/Q11/Q11.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q11A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q11/mind1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Quick to learn but quick to forget.Short term memory is good.
+                            </div>
+                            <div>
+                                <input name="Q11" id="Q11A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q11B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q11/mind2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Average speed of learning. But once learnt,never forget.
+                            </div>
+                            <div>
+                                <input name="Q11" id="Q11B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q11C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q11/mind3.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Slow to learn but remeb=mbers for a long time. Long term memory is good.
+                            </div>
+                            <div>
+                                <input name="Q11" id="Q11C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box12 box">
+                <div class="titleBoxM">
+                    <img height="100px" src="Images/Q12/Q12.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q12A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q12/mind(2)1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Mind tends to get restless easily.
+                            </div>
+                            <div>
+                                <input name="Q12" id="Q12A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q12B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q12/mind(2)2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Mind gets impatient or aggressive easily.
+                            </div>
+                            <div>
+                                <input name="Q12" id="Q12B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q12C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q12/mind(2)3.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Mind remain cool and calm. Mostly,unruffled.
+                            </div>
+                            <div>
+                                <input name="Q12" id="Q12C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box13 box">
+                <div class="titleBoxM">
+                    <img height="100px" src="Images/Q13/Q13.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q13A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q13/mind(3)1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Over thinking
+                            </div>
+                            <div>
+                                <input name="Q13" id="Q13A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q13B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q13/mind(3)2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Quick Implementation
+                            </div>
+                            <div>
+                                <input name="Q13" id="Q13B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q13C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q13/mind(3)3.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Lazy Implementation. Has a tendency to procrastinate.
+                            </div>
+                            <div>
+                                <input name="Q13" id="Q13C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box14 box">
+                <div class="titleBoxM">
+                    <img height="100px" src="Images/Q14/Q14.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q14A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q9/eyes1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Light and disturbed sleep. I wake up easily in the morning.
+                            </div>
+                            <div>
+                                <input name="Q14" id="Q14A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q14B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q14/mind(4)1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Moderate but regular. I can go back to sleep easily.
+                            </div>
+                            <div>
+                                <input name="Q14" id="Q14B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q14C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q14/mind(4)2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Deep and heavy. I can't easily wake up in morning.
+                            </div>
+                            <div>
+                                <input name="Q14" id="Q14C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="box15 box">
+                <div class="titleBoxM">
+                    <img height="100px" src="Images/Q15/Q15.png" alt="">
+                </div>
+                <div class="Qbox">
+                    <label for="Q15A">
+                        <div class="optionA">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q15/mind(5)1.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                I worry a lot.Often feel nervous and anixous
+                            </div>
+                            <div>
+                                <input name="Q15" id="Q15A" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q15B">
+                        <div class="optionB">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q15/mind(5)2.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                I often get irritable, angry and impatient.
+                            </div>
+                            <div>
+                                <input name="Q15" id="Q15B" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                    <label for="Q15C">
+                        <div class="optionC">
+                            <div class="optionImg" style="height: 300px;">
+                                <img style="height: 300px;width: 250px;" src="Images/Q15/mind(5)3.png" alt="">
+                            </div>
+                            <div class="Qinfo" style="height: 100px;">
+                                Loving and caring. It takes a lot to make me angry.
+                            </div>
+                            <div>
+                                <input name="Q15" id="Q15C" type="radio">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="submitBtn">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="nextBtn">
+        <button>Next</button>
+    </div>
+    <canvas id="myChart" width="600" height="600"></canvas>
+    <div style="width: 100%;" class="sugessionTitle">
+        <div  style="font-size: 35px; font-weight: 700; text-align: center;">According To Your Prakrati Your Diet And Yoga Routine</div>
+    </div>
+    <div style="margin-top: 60px;" class="sugessionPitta">
+        <div class="diet">
+            <div class="dietTitle">Diet</div>
+            <div class="dietPlan">
+                <div class="breakfast">
+                    <h1>Breakfast</h1>
+                    Coconut milk chia pudding topped with berries.                </div>
+                <div class="lunch">
+                    <h1>Lunch</h1>
+                    Quinoa and vegetable stir-fry with tofu or grilled chicken.             </div>
+                <div class="dinner">
+                    <h1>Dinner</h1>
+                    Baked salmon with steamed asparagus and quinoa.              </div>
+                <div class="snacks">
+                    <h1>Snacks</h1>
+                    Sliced cucumbers with hummus, and a cooling mint or chamomile tea                </div>
+            </div>
+        </div>
+        <div class="yoga">
+            <div class="dietTitle">Yoga</div>
+            <div class="yogaRoutine">
+                <div class="y1">
+                    <h1>Sheetali Pranayama </h1>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero error temporibus optio voluptatibus fuga illum cupiditate excepturi, provident deleniti, molestias animi neque atque dolore cum rem quo placeat dolorum ad.
+                </div>
+                <div class="y2">
+                    <h1>Surya Namaskar</h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, totam quae architecto eaque natus consectetur dolore aliquam expedita id hic facilis enim saepe, repellat eum dolorum suscipit est, modi assumenda!
+                </div>
+                <div class="y3">
+                    <h1>Shashankasana</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae veritatis perferendis obcaecati error sint, nam laudantium quos repellendus esse mollitia, nisi voluptatibus deleniti sunt? Molestias architecto et sequi perferendis cum.
+                </div>
+                <div class="y4">
+                    <h1>Shitali Karanvirasana </h1>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur velit et facere placeat repellat eius voluptas ab hic magnam. Doloribus temporibus harum rem repudiandae error consequatur, veritatis qui inventore cumque!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 60px;" class="sugessionKapha">
+        <div class="diet">
+            <div class="dietTitle">Diet</div>
+            <div class="dietPlan">
+                <div class="breakfast">
+                    <h1>Breakfast</h1>
+                    Warm quinoa porridge with diced apples and a sprinkle of cinnamon.                </div>
+                <div class="lunch">
+                    <h1>Lunch</h1>
+                    Lentil soup with mixed greens salad and lemon vinaigrette.             </div>
+                <div class="dinner">
+                    <h1>Dinner</h1>
+                    Stir-fried vegetables with tofu or lean turkey and a side of brown rice.              </div>
+                <div class="snacks">
+                    <h1>Snacks</h1>
+                    Sliced apples with almond butter, and ginger tea.                </div>
+            </div>
+        </div>
+        <div class="yoga">
+            <div class="dietTitle">Yoga</div>
+            <div class="yogaRoutine">
+                <div class="y1">
+                    <h1>Utkatasana </h1>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero error temporibus optio voluptatibus fuga illum cupiditate excepturi, provident deleniti, molestias animi neque atque dolore cum rem quo placeat dolorum ad.
+                </div>
+                <div class="y2">
+                    <h1>Virabhadrasana </h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, totam quae architecto eaque natus consectetur dolore aliquam expedita id hic facilis enim saepe, repellat eum dolorum suscipit est, modi assumenda!
+                </div>
+                <div class="y3">
+                    <h1>Ardha Matsyendrasana</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae veritatis perferendis obcaecati error sint, nam laudantium quos repellendus esse mollitia, nisi voluptatibus deleniti sunt? Molestias architecto et sequi perferendis cum.
+                </div>
+                <div class="y4">
+                    <h1>Kapalabhati Pranayama </h1>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur velit et facere placeat repellat eius voluptas ab hic magnam. Doloribus temporibus harum rem repudiandae error consequatur, veritatis qui inventore cumque!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 60px;" class="sugessionVatta">
+        <div class="diet">
+            <div class="dietTitle">Diet</div>
+            <div class="dietPlan">
+                <div class="breakfast">
+                    <h1>Breakfast</h1>
+                    Warm oatmeal with sliced bananas and a sprinkle of cinnamon.                </div>
+                <div class="lunch">
+                    <h1>Lunch</h1>
+                    Quinoa salad with roasted vegetables and a drizzle of olive oil.                </div>
+                <div class="dinner">
+                    <h1>Dinner</h1>
+                    Steamed vegetables with brown rice and lentil soup.                </div>
+                <div class="snacks">
+                    <h1>Snacks</h1>
+                    Almonds or pumpkin seeds, and warm herbal tea.                </div>
+            </div>
+        </div>
+        <div class="yoga">
+            <div class="dietTitle">Yoga</div>
+            <div class="yogaRoutine">
+                <div class="y1">
+                    <h1>Balasana</h1>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero error temporibus optio voluptatibus fuga illum cupiditate excepturi, provident deleniti, molestias animi neque atque dolore cum rem quo placeat dolorum ad.
+                </div>
+                <div class="y2">
+                    <h1>Vrikshasana</h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, totam quae architecto eaque natus consectetur dolore aliquam expedita id hic facilis enim saepe, repellat eum dolorum suscipit est, modi assumenda!
+                </div>
+                <div class="y3">
+                    <h1>Bhujangasana</h1>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae veritatis perferendis obcaecati error sint, nam laudantium quos repellendus esse mollitia, nisi voluptatibus deleniti sunt? Molestias architecto et sequi perferendis cum.
+                </div>
+                <div class="y4">
+                    <h1>Savasana </h1>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur velit et facere placeat repellat eius voluptas ab hic magnam. Doloribus temporibus harum rem repudiandae error consequatur, veritatis qui inventore cumque!
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="logo"><img style="width: 200px; height: 80px;" src="Images/Aarogya logo.png" alt=""></div>
+        <div class="aboutUs">
+            <div class="aboutUsTitle">
+                About Us
+            </div>
+            <div class="aboutInfo">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus itaque, reprehenderit quia quibusdam fuga vel quasi quo sint! Porro itaque dolores ut reiciendis veritatis assumenda ipsum minus, accusamus tenetur officia.
+            </div>
+        </div>
+        <div class="contactUs">
+            <div class="contactUsTitle">
+                Contact Us
+            </div>
+            <div class="contactInfo">
+                <div style="height: 60px; width: 100%;">+91-9370003522</div>
+                <div style="height: 60px; width: 100%;">Enter Your E-mail</div>
+                <div style="height: 100px; width: 100%;"><input id="footerInp" type="email" placeholder="Enter E-mail"></div>
+            </div>
+            <div style="height: 60px; width: 50%;" class="social">
+                <div class="insta">
+                    <img style="height: 60px; width: 60px;" src="Images/insta.jpg" alt="">
+                </div>
+                <div class="facebook">
+                    <img style="height: 60px; width: 60px;" src="Images/facebook.png" alt="">
+                </div>
+                <div class="what">
+                    <img style="height: 60px; width: 60px;" src="Images/what.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

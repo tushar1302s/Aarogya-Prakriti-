@@ -1,0 +1,478 @@
+body{
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+nav{
+    height: 110px;
+    width: 100%;
+    background-color: #E3F2FD;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+.logo{
+    display: flex;
+}
+.other{
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+#homeIcon{
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    font-size: 30px;
+    color: black;
+}
+#homeLink{
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    font-size: 22px;
+}
+button{
+    height: 40px;
+    width: 118.7px;
+    background-color: rgb(77, 77, 242);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.logo{
+    width: 50%;
+}
+.template{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.prakratiInfo{
+    width: 100%;
+    height: 400px;
+    background-color:#3E90D3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.vattaInfo{
+    width: 28%;
+    height: 300px;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+.pittaInfo{
+    width: 28%;
+    height: 300px;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+.kaphaInfo{
+    width: 28%;
+    height: 300px;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+.PrakratiTitle{
+    height: 40px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.info{
+    height: 220px;
+    width: 95%;
+    font-size: 22px;
+    font-weight: bold;
+}
+.goToTest{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.testBtn{
+    height: 50px;
+    width: 130px;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    transition: 1s;
+}
+.testBtn:hover{
+    background-color: green;
+}
+.testImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+footer{
+    height: 400px;
+    width: 100%;
+    margin-top: 60px;
+    background-color: #11141B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.logo{
+    height: 80px;
+    width: 200px;
+    background-color: #E3F2FD;
+}
+.aboutUs{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.contactUs{
+    height: 300px;
+    width: 500px;
+}
+.aboutUsTitle{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.aboutInfo{
+    height: 220px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+}
+.contactUsTitle{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.contactInfo{
+    height: 220px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+}
+#footerInp{
+    height: 30px;
+    width: 80%;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.sugessionTitle{
+    display: none;
+}
+.sugessionVatta{
+    margin: auto;
+    height: 800px;
+    width: 90%;
+    /* background-color: aqua; */
+    display: none;
+}
+.sugessionPitta{
+    margin: auto;
+    height: 800px;
+    width: 90%;
+    /* background-color: aqua; */
+    display: none;
+}
+.sugessionKapha{
+    margin: auto;
+    height: 800px;
+    width: 90%;
+    /* background-color: aqua; */
+    display: none;
+}
+.diet{
+    height: 380px;
+    width: 100%;
+    /* background-color: beige; */
+    border: solid 2px black;
+}
+.dietTitle{
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.dietPlan{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.breakfast{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+.lunch{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+.snacks{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+.dinner{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+h1{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+.yoga{
+    height: 380px;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 40px;
+    border: solid 2px black;
+}
+.yogaRoutine{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.y1{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+.y2{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+.y3{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+.y4{
+    height: 320px;
+    width: 22%;
+    /* background-color: #3E90D3; */
+}
+.quizInfo{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 2px black;
+    margin: auto;
+}
+#nextIcon1{
+    position: absolute;
+    top: 370px;
+    left: 930px;
+    font-size: 32px;
+}
+#nextIcon2{
+    position: absolute;
+    top: 370px;
+    left: 930px;
+    font-size: 32px;
+}
+#nextIcon3{
+    position: absolute;
+    top: 280px;
+    left: 710px;
+    font-size: 32px;
+}
+#startBtn{
+    background-color: green;
+    height: 36px;
+    width: 100px;
+    padding: 0%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+}
+.firstImg{
+
+}
+.secondImg{
+    display: none;
+}
+.thirdImg{
+    display: none;
+}
+.container{
+    height: 550px;
+    width: 90%;
+    margin: auto;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    height: 100%;
+    width: 800px;
+}
+.box{
+    height: 100%;
+    width: 800px;
+}
+.titleBox{
+    height: 100px;
+    width: 100%;
+    background-color: #ff914d;
+    display: flex;
+    justify-content: center;
+}
+.titleBoxM{
+    height: 100px;
+    width: 100%;
+    background-color: #ff66c4;
+    display: flex;
+    justify-content: center;
+}
+.Qbox{
+    height: 440px;
+    width: 800px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.optionA{
+    height: 440px;
+    width: 266px;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.optionB{
+    height: 440px;
+    width: 266px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.optionC{
+    height: 440px;
+    width: 266px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.optionImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1{
+    display: none;
+}
+.box2{
+    display: none;
+}
+.box3{
+    display: none;
+}
+.box4{
+    display: none;
+}
+.box5{
+    display: none;
+}
+.box6{
+    display: none;
+}
+.box7{
+    display: none;
+}
+.box8{
+    display: none;
+}
+.box9{
+    display: none;
+}
+.box10{
+    display: none;
+}
+.box11{
+    display: none;
+}
+.box12{
+    display: none;
+}
+.box13{
+    display: none;
+}
+.box14{
+    display: none;
+}
+.box15{
+    display: none;
+}
+.Qinfo{
+    /* border: solid 2px black; */
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.nextBtn{
+    position: absolute;
+    top: 480px;
+    left: 1250px;
+    display: none;
+}
+.submitBtn{
+    position: absolute;
+    top: 400px;
+    left: 1250px;
+    display: none;
+}
+.display{
+    display: block;
+}
+.displayNone{
+    display: none;
+}
+#myChart{
+    display: none;
+}

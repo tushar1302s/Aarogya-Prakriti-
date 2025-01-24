@@ -1,0 +1,392 @@
+body{
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+nav{
+    height: 110px;
+    width: 100%;
+    background-color: #E3F2FD;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+.other{
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.logo{
+    display: flex;
+}
+#homeIcon{
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    font-size: 30px;
+    color: black;
+}
+#homeLink{
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    font-size: 22px;
+}
+button{
+    height: 40px;
+    width: 118.7px;
+    background-color: rgb(77, 77, 242);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.logo{
+    width: 50%;
+}
+.template{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.prakratiInfo{
+    width: 100%;
+    height: 400px;
+    /* background-color:#3E90D3; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.vattaInfo{
+    width: 28%;
+    height: 350px;
+    background-color: rgb(208, 255, 192);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.vattaInfo:hover{
+    height: 370px;
+    border:solid 2px black ;
+    box-shadow: 2px 2px 8px 8px rgb(181, 180, 180);
+}
+.pittaInfo{
+    width: 28%;
+    height: 350px;
+    background-color: pink;
+    background-color: rgba(252, 165, 3, 0.929);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.pittaInfo:hover{
+    height: 370px;
+    border:solid 2px black ;
+    box-shadow: 2px 2px 8px 8px rgb(181, 180, 180);
+}
+.kaphaInfo{
+    width: 28%;
+    height: 350px;
+    background-color: rgb(125, 210, 27);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.kaphaInfo:hover{
+    height: 370px;
+    border:solid 2px black ;
+    box-shadow: 2px 2px 8px 8px rgb(181, 180, 180);
+}
+.PrakratiTitle{
+    height: 40px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.info{
+    height: 220px;
+    width: 95%;
+    font-size: 22px;
+    font-weight: bold;
+    position:relative;
+    bottom: 20px;
+}
+.goToTest{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.testBtn{
+    height: 50px;
+    width: 130px;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    transition: 0.2s;
+    position: absolute;
+    left: 300px;
+    top: 1770px;
+}
+.testBtn:hover{
+    background-color: orange;
+}
+.testImage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.box{
+    margin: auto 100px;
+    width: 60%;
+    height: 300px;
+    background-color: aqua;
+    transition: 1s;
+    border-radius: 10px;
+}
+.box:hover{
+    box-shadow: 0px 0px 4px 4px gray;
+}
+.title{
+    height: 80px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.qBox{
+    height: 220px;
+    width: 100%;
+    background-color: aliceblue;
+    font-size: 25px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.box2{
+    display: none;
+}
+.box3{
+    display: none;
+}
+.box4{
+    display: none;
+}
+.box5{
+    display: none;
+}
+.box6{
+    display: none;
+}
+.box7{
+    display: none;
+}
+.box8{
+    display: none;
+}
+.Submit{
+    display: none;
+    margin-top: 5%;
+    height: 40px;
+    width: 130px;
+    background-color: pink;
+    font-size: 22px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+.nextBtn{
+    display: none;
+    height: 50px;
+    width: 140px;
+}
+.preBtn{
+    height: 50px;
+    width: 140px;
+    display: none;
+}
+.display{
+    display: block;
+}
+.displayNone{
+    display: none;
+}
+.attempted{
+    margin: 8px;
+    width: 80%;
+    height: 35px;
+    border-radius: 20px;
+    background-color: aquamarine;
+}
+.inner{
+    height: 35px;
+    border-radius: 20px;
+    background-color: pink;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.atemptedQ{
+    height: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    display: none;
+}
+.bigResultBox{
+    height: 60px;
+    width: 80%;
+    background-color: blanchedalmond;
+    display:none;
+    font-size: larger;
+    font-weight: bolder;
+}
+.vatta{
+    height: 60px;
+    background-color: rgb(0, 208, 255);
+}
+.pitta{
+    height: 60px;
+    background-color: rgb(126, 197, 39);
+}
+.kapha{
+    height: 60px;
+    background-color: pink;
+}
+form{
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.preNextBtn{
+    height: 60px;
+    width: 300px;
+    margin: auto;
+    margin-left: 60%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.next{
+    height: 40px;
+    width: 130px;
+    background-color: pink;
+    font-size: 22px;
+    font-weight: bolder;
+    border-right: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+    padding: 0;
+}
+.pre{
+    height: 40px;
+    width: 130px;
+    background-color: rgb(0, 255, 174);
+    font-size: 22px;
+    font-weight: bolder;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
+    padding: 0;
+}
+
+.container{
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    /* background-color: #3E90D3; */
+    box-shadow: 0px 0px 4px 4px gray;
+    border-radius: 20px;
+}
+.journey{
+    margin: auto;
+    margin-top: 200px;
+    display: none;
+}
+.Start{
+    height: 40px;
+    background-color: chartreuse;
+    font-size: 22px;
+    font-weight: bolder;
+}
+footer{
+    height: 400px;
+    width: 100%;
+    margin-top: 60px;
+    background-color: #11141B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.logo{
+    height: 80px;
+    width: 200px;
+    background-color: #E3F2FD;
+}
+.aboutUs{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.contactUs{
+    height: 300px;
+    width: 500px;
+}
+.aboutUsTitle{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.aboutInfo{
+    height: 220px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+}
+.contactUsTitle{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.contactInfo{
+    height: 220px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+}
+input{
+    height: 30px;
+    width: 80%;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

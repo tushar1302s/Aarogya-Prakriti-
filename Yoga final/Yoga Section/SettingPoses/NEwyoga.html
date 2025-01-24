@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>@sky.git - Image Slider w/ animation effect</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+  <link rel="stylesheet" href="style(1)(1).css">
+
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #1e1e1e;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to top right, #fe5b3d , #ffac38);
+  padding: 20px 100px;
+}
+.logo img{
+  width: 40px;
+  border-radius: 50px;
+}
+.navbar{
+  display: flex;
+  text-align: center;
+}
+.navbar li{
+  position: relative;
+}
+.navbar a{
+  font-size: 1rem;
+  padding: 15px 35px;
+  color: #FFF;
+  font-weight: 500;
+}
+.cta-button {
+  display: inline-block;
+  background-color: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.cta-button:hover {
+  background-color: #474fa0;
+  border-radius: 35px;
+}
+.swiper {
+  max-width: 50%;
+  overflow: visible;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 25%;
+  background: linear-gradient(to bottom right, #b8b8b88f, #0000005e);
+}
+
+.swiper-slide-active::after {
+  background: none;
+}
+
+.swiper-slide>div {
+  text-align: center;
+  display: none;
+  opacity: 0;
+}
+
+.swiper-slide-active div {
+  display: block;
+  opacity: 1;
+}
+
+.swiper-slide h2 {
+  font-size: 1.2rem;
+  font-family: "Libre Baskerville", serif;
+  position: relative;
+}
+
+.swiper-slide h2::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 50%;
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.swiper-slide-active h2::after {
+  animation: line 0.5s linear forwards;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 3px 17px rgb(0 0 0 / 25%);
+  border-radius: 25%;
+  aspect-ratio: 1/1;
+}
+
+@media (min-width: 768px) {
+  .swiper-slide h2 {
+    font-size: 2rem;
+  }
+}
+</style>
+<body>
+    
+  <header>
+    <a href="#" class="logo"><img src="Cargo intro.png" alt=""></a>
+
+    <div class="intro" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="index (1) (1).html" class="cta-button">Temples</a></li>
+        <li><a href="Museums.html" class="cta-button">Museums</a></li>
+        <li><a href="Haunted.html" class="cta-button">Haunted</a></li>
+        <li><a href="Holidays.html" class="cta-button">Holidays & Vacations</a></li>
+    </ul>
+    <div class="header-btn">
+        <a gref ="#" class="sign-up">Bookings</a>
+    </div>
+    </header>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="Temple1" >
+        <div>
+          <h2>Angkor Wat</h2>
+          <p><i class="fa-light fa-location-dot"></i>: Angkor, Cambodia<br>
+          -Info = Angkor Wat, originally a Hindu temple, is one of the largest religious monuments in the world. It was built in the 12th century by the Khmer Empire.
+         </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="Temple5">
+        <div>
+          <h2>Meenakshi Amman Temple</h2>
+          <p><i class="fa-light fa-location-dot"></i> : Madurai, Tamil Nadu, India<br>
+          -Info = The Meenakshi Amman Temple is dedicated to Goddess Parvati (Meenakshi) and Lord Shiva. It is known for its intricate architecture and vibrant sculptures.
+         </p>
+          
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="Temple3">
+        <div>
+          <h2>Ranakpur Jain Temple</h2>
+          <p><i class="fa-light fa-location-dot"></i> : Ranakpur, Rajasthan, India<br>
+          -Info = While a Jain temple, Ranakpur is a notable religious site with intricate marble carvings depicting Hindu deities.
+         </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="Temple6">
+        <div>
+          <h2>Kedarnath Temple</h2>
+          <p><i class="fa-light fa-location-dot"></i> : Kedarnath, Uttarakhand, India<br>
+          -Info = Kedarnath Temple is one of the holiest Hindu temples dedicated to Lord Shiva. It is part of the Char Dham Yatra.
+         </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="Temple4">
+        <div>
+          <h2>Badami Cave Temples</h2>
+          <p><i class="fa-light fa-location-dot"></i> : Badami, Karnataka, India<br>
+          -Info = The Badami Cave Temples are rock-cut cave temples dedicated to various deities, including Lord Shiva and Lord Vishnu
+        </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="Temple2">
+        <div>
+          <h2>Konark Sun Temple</h2>
+          <p><i class="fa-light fa-location-dot"></i> : Konark, Odisha, India<br>
+            -Info = Dedicated to the Sun God, Surya, the Konark Sun Temple is a UNESCO World Heritage Site known for its impressive architecture and intricate carvings.
+         </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="Temple7">
+        <div>
+          <h2>Brihadeeswarar Temple</h2>
+          <p><i class="fa-light fa-location-dot"></i> : Thanjavur, Tamil Nadu, India<br>
+          -Info = Also known as the Big Temple, this UNESCO World Heritage Site is dedicated to Lord Shiva and is known for its massive Shiva lingam.
+         </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="Temple8.jpg">
+        <div>
+          <h2>Somnath Temple</h2>
+          <p><i class="fa-light fa-location-dot"></i> : Prabhas Patan, Gujarat, India<br>
+          -Info = One of the twelve Jyotirlingas, the Somnath Temple is an ancient and revered Hindu temple dedicated to Lord Shiva.
+         </p>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+  <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script>
+  <script src="script (1) (1).js"></script>
+
+</body>
+
+</html>

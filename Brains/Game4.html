@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+    <style>
+            .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .clearfix:after {  
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+
+        p {
+        font-weight: 400;
+        }
+
+        h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+        }
+
+        .board {
+        position: relative;
+        width: 22em;
+        font-family: sans-serif;
+        font-weight: 700;
+        margin: 0 auto;
+        }
+
+        .row {
+        float: left;
+        }
+
+        .row:first-child .square {
+        border-top: 0;
+        }
+
+        .square {
+        color: #605B56 ;
+        border-color: #605B56;
+        font-size: 6em;
+        width: 1.2em;
+        height: 1.2em;
+        line-height: 1.2em;
+        float: left;
+        border-style: solid;
+        border-width: 1px 1px 0 0;
+        text-align: center;
+        cursor: default;
+        }
+
+        .square:last-child {
+        border-right: 0px;
+        }
+
+        .x-marker {
+        color: #eeda76;
+        }
+
+        .o-marker {
+        color: #39abd9;
+        }
+
+
+        .modal-container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        display: none;
+        }
+
+        .modal {
+        font-family: Raleway;
+        text-align: center;
+        background-color: hsla(30, 12%, 23%, 0.95);
+        color: white;
+        font-size: 1em;
+        height: 100%;
+        padding: 30px;
+        }
+
+        .end-game-modal {
+        display: none;
+        } 
+
+        .choose-modal span{
+        line-height: 1.5em;
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 3em;
+        }
+
+        .end-game-modal span {
+        color: #eeda76;
+        text-transform: uppercase;
+        line-height: 1.5em;
+        font-size: 1.3em;
+        padding: 0.2em 0.4em;
+        }
+
+
+        .button-area span {
+        display: inline-block;
+        background-color: hsla(30, 10%, 20%, 0.95);
+        margin: 0.2em 0.2em 0 0.2em;
+        }
+
+        .button-area span:hover {
+        cursor: pointer;
+        background-color: hsla(30, 10%, 30%, 0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="board clearfix">
+            <div class="row">
+            <div class="square" id="0"></div>
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            </div>
+            <div class="row">
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            </div>
+            <div class="row">
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+            </div>
+            <div class="modal-container">
+            <div class="modal choose-modal">
+                <h3>Choose Your Weapon</h3>
+                <div class="button-area"><span class="x-marker">X</span><span class="o-marker">O</span>
+                </div>
+            </div>
+            <div class="modal end-game-modal">
+                <h3></h3>
+                <p>Try harder next time!</p>
+                <div class="button-area"><span>Play Again</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <script>
+                var cpuIcon = 'X';
+    var playerIcon = 'O';
+    var AIMove;
+    //settings for liveBoard: 1 is cpuIcon, -1 is playerIcon, 0 is empty
+    var liveBoard = [1, -1, -1, -1, 1, 1, 1, -1, -1];
+    var winningLines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+    ];
+
+    //UI
+    function renderBoard(board) {
+    board.forEach(function(el, i) {
+        var squareId = '#' + i.toString();
+        if (el === -1) {
+        $(squareId).text(playerIcon);
+        } else if (el === 1) {
+        $(squareId).text(cpuIcon);
+        }
+    });
+    
+    $('.square:contains(X)').addClass('x-marker');
+    $('.square:contains(O)').addClass('o-marker');
+    }
+
+    function animateWinLine() {
+    var idxOfArray = winningLines.map(function(winLines) {
+        return winLines.map(function(winLine) {
+        return liveBoard[winLine];
+        }).reduce(function(prev, cur) {
+        return prev + cur;
+        });
+    });
+    var squaresToAnimate = winningLines[idxOfArray.indexOf(Math.abs(3))];
+    
+    squaresToAnimate.forEach(function(el) {
+        $('#' + el).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+        });
+    }
+
+    //MODALS
+    function chooseMarker() {
+    $('.modal-container').css('display', 'block');
+    $('.choose-modal').addClass('animated bounceInUp');
+    
+    $('.button-area span').click(function() {
+        var marker = $(this).text();
+        playerIcon = (marker === 'X' ? 'X' : 'O');
+        cpuIcon = (marker === 'X' ? 'O' : 'X');
+
+        $('.choose-modal').addClass('animated bounceOutDown');
+        setTimeout(function() {
+        $('.modal-container').css('display', 'none');
+        $('.choose-modal').css('display','none');
+        startNewGame();
+        }, 700);
+        
+        $('.button-area span').off();
+    });
+    }
+
+    function endGameMessage(){
+    var result = checkVictory(liveBoard);
+    $('.end-game-modal h3').text(result === 'win' ? 'You Lost' : "It's a draw");
+    
+    $('.modal-container').css('display', 'block');
+    $('.end-game-modal').css('display','block').removeClass('animated bounceOutDown').addClass('animated bounceInUp');
+    
+    $('.button-area span').click(function() {
+        
+        $('.end-game-modal').removeClass('animated bounceInUp').addClass('animated bounceOutDown');
+        
+        setTimeout(function() {
+        $('.modal-container').css('display', 'none');
+        startNewGame();
+        }, 700);
+        
+        $('.button-area span').off();
+    });
+    }
+
+    //GAMEPLAY
+    function startNewGame() {
+    liveBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    $('.square').text("").removeClass('o-marker x-marker');
+    renderBoard(liveBoard);
+    playerTakeTurn();
+    }
+
+    function playerTakeTurn() {
+    $('.square:empty').hover(function() {
+        $(this).text(playerIcon).css('cursor', 'pointer');
+    }, function() {
+        $(this).text('');
+    });
+
+    $('.square:empty').click(function() {
+        $(this).css('cursor', 'default');
+        liveBoard[parseInt($(this).attr('id'))] = -1;
+        renderBoard(liveBoard);
+        
+        if (checkVictory(liveBoard)) {    
+        setTimeout(endGameMessage,(checkVictory(liveBoard) === 'win') ? 700 : 100);
+        } else {
+        setTimeout(aiTakeTurn, 100);
+        }
+        $('.square').off();
+    });
+    }
+
+    function aiTakeTurn() {
+    miniMax(liveBoard, 'aiPlayer');
+    liveBoard[AIMove] = 1;
+    renderBoard(liveBoard);
+    if (checkVictory(liveBoard)) {
+        animateWinLine();
+        setTimeout(endGameMessage, checkVictory(liveBoard) === 'win' ? 700 : 100);
+    } else {
+        playerTakeTurn();
+    }
+    }
+
+    //UTILITIES
+    function checkVictory(board) {
+    var squaresInPlay = board.reduce(function(prev, cur) {
+        return Math.abs(prev) + Math.abs(cur);
+    });
+
+    var outcome = winningLines.map(function(winLines) {
+        return winLines.map(function(winLine) {
+        return board[winLine];
+        }).reduce(function(prev, cur) {
+        return prev + cur;
+        });
+    }).filter(function(winLineTotal) {
+        return Math.abs(winLineTotal) === 3;
+    });
+
+    if (outcome[0] === 3) {
+        return 'win';
+    } else if (outcome[0] === -3) {
+        return 'lose';
+    } else if (squaresInPlay === 9) {
+        return 'draw';
+    } else {
+        return false;
+    }
+    }
+
+    function availableMoves(board) {
+    return board.map(function(el, i) {
+        if (!el) {
+        return i;
+        }
+    }).filter(function(e) {
+        return (typeof e !== "undefined");
+    });
+    }
+
+    //AI
+    //minimax algorithm - explanation here: http://http://neverstopbuilding.com/minimax
+    function miniMax(state, player) {
+    //base cases: check for an end state and if met - return the score from the perspective of the AI player.  
+    var rv = checkVictory(state);
+    if (rv === 'win') {
+        return 10;
+    }
+    if (rv === 'lose') {
+        return -10;
+    }
+    if (rv === 'draw') {
+        return 0;
+    }
+
+    var moves = [];
+    var scores = [];
+    //for each of the available squares: recursively make moves and push the score + accompanying move to the moves + scores array
+    availableMoves(state).forEach(function(square) {
+        state[square] = (player === 'aiPlayer') ? 1 : -1;
+        scores.push(miniMax(state, (player === 'aiPlayer') ? 'opponent' : 'aiPlayer'));
+        moves.push(square);
+        state[square] = 0;
+    });
+
+    //calculate and return the best score gathered from each of the available moves. track the best movein the AIMove variable
+
+    if (player === 'aiPlayer') {
+        AIMove = moves[scores.indexOf(Math.max.apply(Math, scores))];
+        return Math.max.apply(Math, scores);
+    } else {
+        AIMove = moves[scores.indexOf(Math.min.apply(Math, scores))];
+        return Math.min.apply(Math, scores);
+    }
+    }
+
+    renderBoard(liveBoard);
+    chooseMarker();
+            </script>
+</body>
+</html>
